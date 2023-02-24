@@ -1,0 +1,8 @@
+export const FETCH_DATA = 'FETCH_DATA';
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAILED = 'FETCH_DATA_FAILED';
+
+// export const SORT_POSTS_ASC = 'SORT_POSTS_ASC';
+// export const SORT_POSTS_DESC = 'SORT_POSTS_DESC';
+
+// export const SEARCH_POSTS = 'SEARCH_POSTS';

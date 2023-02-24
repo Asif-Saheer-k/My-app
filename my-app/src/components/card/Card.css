@@ -1,0 +1,17 @@
+
+
+.post {
+	padding: 30px;
+	border: 1px solid #292929;
+	color: #292929;
+}
+
+.post h2 {
+	font-size: 21px;
+	margin-bottom: 20px;
+}
+
+ .post p {
+	font-size: 16px;
+}
+
