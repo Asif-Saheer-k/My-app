@@ -9,3 +9,27 @@ header {
 header .title h1 {
 	font-size: 40px;
 }
+.AddData{
+    text-align: center;
+    justify-content: center;
+
+}
+.error{
+    color: red;
+
+}
+.addButton{
+
+    margin-top: 2rem;
+}
+.inputFiled{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+  
