@@ -10,6 +10,8 @@ body {
 	font-family: 'Poppins', sans-serif;
 	width: 100%;
 	padding-bottom: 100px;
+	background: linear-gradient(to right, #bdc3c7, #2c3e50);
+	scroll-behavior: smooth;
 }
 .posts {
 	margin-top: 40px;
@@ -17,6 +19,27 @@ body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 20px;
+	position: relative;
+
+	opacity: 0;
+	transform: translate(-10%);
+	animation: visible ease 1s forwards;
+}
+
+@keyframes visible {
+	to{
+		transform: translate(0);
+		opacity: 1;
+	}
+	
+}
+.container{
+	padding: 0 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 }
 @media screen and (max-width: 768px) {
 	.posts {

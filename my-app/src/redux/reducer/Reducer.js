@@ -3,7 +3,8 @@ import {
   FETCH_DATA,
   FETCH_DATA_FAILED,
   FETCH_DATA_SUCCESS,
-  ADD_DATA
+  ADD_DATA,
+  DELETE_DATA
 } from "../data/Data";
 
 const initialState = {
@@ -34,6 +35,13 @@ export const PostReducers = (state = initialState, action) => {
         loading: false,
         posts: action.payload,
     };
+  }
+  else if (action.type === DELETE_DATA) {
+    return {
+        ...state,
+        loading: false,
+        posts: action.payload,
+    }
   } else {
     return state;
   }

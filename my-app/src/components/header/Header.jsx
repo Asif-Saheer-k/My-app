@@ -39,7 +39,7 @@ function Header({ lastId,posts }) {
       }
       try {
         const { data } = await axios.post("https://jsonplaceholder.typicode.com/posts",obj)
-        posts?.unshift(data)
+        posts.unshift(data)
         dispatch(AddPost(posts))
         handleClose()
       } catch (error) {
