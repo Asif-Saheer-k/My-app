@@ -10,7 +10,7 @@ function HomePage() {
 	const dispatch = useDispatch();
 	const { posts, loading } = useSelector((state) => state.PostReducers);
 	const [currentPage, setCurrentPage] = useState(1);
- console.log("k");
+
 	useEffect(() => {
 		dispatch(fetchPosts());
 	}, [dispatch]);
