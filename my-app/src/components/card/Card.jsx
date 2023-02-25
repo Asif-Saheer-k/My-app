@@ -130,10 +130,9 @@ export default function Card({ post }) {
           </div>
         </Box>
       </Modal>
+
       <div key={post.id} className="post">
-        <h2>{post?.title}</h2>
-        <p>{post?.body}</p>
-        <div className="icone">
+      <div className="icone">
           <div
             className="deleteicone"
             onClick={(e) => {
@@ -151,6 +150,9 @@ export default function Card({ post }) {
             <EditLocationAltIcon sx={{ color: "white" }} />
           </div>
         </div>
+        <h2>{post?.title}</h2>
+        <p>{post?.body}</p>
+      
       </div>
     </>
   );
