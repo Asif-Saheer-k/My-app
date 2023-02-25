@@ -11,9 +11,15 @@
 }
 .icone{
     display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
 }
 .deleteicone {
     background-color: red;
+   bottom: 0;
+   top: auto;
     width: 30px;
     padding: 3px 2px 2px;
     border-radius: 6px;

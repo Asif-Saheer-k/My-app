@@ -90,7 +90,7 @@ function Header({ lastId,posts }) {
         </Box>
       </Modal>
       <div className="title">
-        <h1>My Project</h1>
+        <h1>ALL POST</h1>
       </div>
       <div className="button-style">
         <Button style={{backgroundColor:"white"}} onClick={handleOpen}>ADD POST</Button>
