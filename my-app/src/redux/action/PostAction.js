@@ -4,6 +4,7 @@ import {
   FETCH_DATA_SUCCESS,
   ADD_DATA,
   DELETE_DATA,
+  UPDATE_DATA,
 } from "../data/Data";
 import axios from "axios";
 
@@ -28,4 +29,10 @@ export const DeletePost = (id) => (dispatch, getState) => {
   });
 
   dispatch({ type: DELETE_DATA, payload: newArr });
+};
+export const updatePost = (post) => (dispatch, getState) => {
+  const { PostReducers } = getState();
+ const upd_obj = PostReducers.posts.findIndex((obj => obj.id ==post.id ));
+ PostReducers.posts[upd_obj]= post;
+  dispatch({ type: UPDATE_DATA, payload: PostReducers.posts });
 };

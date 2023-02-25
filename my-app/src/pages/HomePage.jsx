@@ -14,7 +14,7 @@ function HomePage() {
   useEffect(() => {
     dispatch(fetchPosts());
   }, [dispatch]);
-  const postPerPage = 5;
+  const postPerPage = 6;
   const totalPosts = posts?.length;
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;

@@ -39,7 +39,7 @@ function Header({ lastId,posts }) {
       }
       try {
         const { data } = await axios.post("https://jsonplaceholder.typicode.com/posts",obj)
-        posts.unshift(data)
+        posts.push(data)
         dispatch(AddPost(posts))
         handleClose()
       } catch (error) {
@@ -92,8 +92,8 @@ function Header({ lastId,posts }) {
       <div className="title">
         <h1>My Project</h1>
       </div>
-      <div>
-        <Button onClick={handleOpen}>Open modal</Button>
+      <div className="button-style">
+        <Button style={{backgroundColor:"white"}} onClick={handleOpen}>ADD POST</Button>
       </div>
     </header>
   );

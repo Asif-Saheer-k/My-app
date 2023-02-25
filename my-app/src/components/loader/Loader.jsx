@@ -3,10 +3,10 @@ import "./Loader.css"
 
 function Loader() {
   return (
-    <div className="loader">
-    <div></div>
-    <div></div>
-    <div></div>
+<div class="bouncing-loader">
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
   )
 }

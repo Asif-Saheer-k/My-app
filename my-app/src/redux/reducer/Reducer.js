@@ -4,7 +4,8 @@ import {
   FETCH_DATA_FAILED,
   FETCH_DATA_SUCCESS,
   ADD_DATA,
-  DELETE_DATA
+  DELETE_DATA,
+  UPDATE_DATA,
 } from "../data/Data";
 
 const initialState = {
@@ -13,6 +14,7 @@ const initialState = {
 };
 
 export const PostReducers = (state = initialState, action) => {
+   
   if (action.type === FETCH_DATA) {
     return {
       ...state,
@@ -31,17 +33,23 @@ export const PostReducers = (state = initialState, action) => {
     };
   } else if (action.type === ADD_DATA) {
     return {
-        ...state,
-        loading: false,
-        posts: action.payload,
+      ...state,
+      loading: false,
+      posts: action.payload,
     };
-  }
-  else if (action.type === DELETE_DATA) {
+  } else if (action.type === DELETE_DATA) {
+    
     return {
-        ...state,
-        loading: false,
-        posts: action.payload,
-    }
+      ...state,
+      loading: false,
+      posts: action.payload,
+    };
+  } else if (action.type === UPDATE_DATA) {
+    return {
+      ...state,
+      loading: false,
+      posts: action.payload,
+    };
   } else {
     return state;
   }
@@ -49,5 +57,4 @@ export const PostReducers = (state = initialState, action) => {
 
 export const rootReducers = combineReducers({
   PostReducers,
-  
 });

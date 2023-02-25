@@ -32,3 +32,11 @@ header .title h1 {
 	opacity: 0;
 	animation: visible 1.2s ease forwards;
 }
+.button-style{
+    position: absolute;
+    top:13rem;
+    right: 0;
+    width: 120px;
+    transform: translateY(-50%);
+    margin-right: 3rem;
+}
