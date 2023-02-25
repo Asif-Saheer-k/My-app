@@ -14,7 +14,6 @@ const initialState = {
 };
 
 export const PostReducers = (state = initialState, action) => {
-   
   if (action.type === FETCH_DATA) {
     return {
       ...state,
@@ -38,7 +37,6 @@ export const PostReducers = (state = initialState, action) => {
       posts: action.payload,
     };
   } else if (action.type === DELETE_DATA) {
-    
     return {
       ...state,
       loading: false,

@@ -20,33 +20,35 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-function Header({ lastId,posts }) {
- const dispatch = useDispatch();
+function Header({ lastId, posts }) {
+  const dispatch = useDispatch();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [error,setError]=useState()
+  const [error, setError] = useState();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const AddData = async () => {
-    
     if (title && description) {
-      const obj={
-        userId:1,
-        id:lastId+1,
-        title:title,
-        body:description,
-      }
+      const obj = {
+        userId: 1,
+        id: lastId + 1,
+        title: title,
+        body: description,
+      };
       try {
-        const { data } = await axios.post("https://jsonplaceholder.typicode.com/posts",obj)
-        posts.push(data)
-        dispatch(AddPost(posts))
-        handleClose()
+        const { data } = await axios.post(
+          "https://jsonplaceholder.typicode.com/posts",
+          obj
+        );
+        posts.push(data);
+        dispatch(AddPost(posts));
+        handleClose();
       } catch (error) {
-        setError("Something Went Wrong")
+        setError("Something Went Wrong");
       }
-    }else{
-      setError("Please Update Field")
+    } else {
+      setError("Please Update Field");
     }
   };
   return (
@@ -71,7 +73,9 @@ function Header({ lastId,posts }) {
                 }}
               />
               <TextField
-              onChange={(e)=>{setDescription(e.target.value)}}
+                onChange={(e) => {
+                  setDescription(e.target.value);
+                }}
                 style={{ width: "100%", marginTop: "2rem" }}
                 id="filled-multiline-static"
                 label="Enter Description"
@@ -79,9 +83,14 @@ function Header({ lastId,posts }) {
                 rows={4}
                 variant="filled"
               />
-              {error&&<span className="error">{error}</span>}
+              {error && <span className="error">{error}</span>}
               <div className="AddData">
-                <Button variant="contained" className="addButton" onClick={AddData} style={{ marginTop: "2rem" }}>
+                <Button
+                  variant="contained"
+                  className="addButton"
+                  onClick={AddData}
+                  style={{ marginTop: "2rem" }}
+                >
                   ADD DATA
                 </Button>
               </div>
@@ -93,7 +102,9 @@ function Header({ lastId,posts }) {
         <h1>ALL POST</h1>
       </div>
       <div className="button-style">
-        <Button style={{backgroundColor:"white"}} onClick={handleOpen}>ADD POST</Button>
+        <Button style={{ backgroundColor: "white" }} onClick={handleOpen}>
+          ADD POST
+        </Button>
       </div>
     </header>
   );

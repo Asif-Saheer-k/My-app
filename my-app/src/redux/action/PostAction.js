@@ -32,7 +32,7 @@ export const DeletePost = (id) => (dispatch, getState) => {
 };
 export const updatePost = (post) => (dispatch, getState) => {
   const { PostReducers } = getState();
- const upd_obj = PostReducers.posts.findIndex((obj => obj.id ==post.id ));
- PostReducers.posts[upd_obj]= post;
+  const upd_obj = PostReducers.posts.findIndex((obj) => obj.id == post.id);
+  PostReducers.posts[upd_obj] = post;
   dispatch({ type: UPDATE_DATA, payload: PostReducers.posts });
 };

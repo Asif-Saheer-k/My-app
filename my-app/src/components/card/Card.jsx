@@ -72,17 +72,17 @@ export default function Card({ post }) {
       userId: data.userId,
       title: post.title,
       body: post.description,
-    }
+    };
     try {
       const update = await axios.patch(
         `https://jsonplaceholder.typicode.com/posts/postId=${data.id}`,
         { obj }
       );
-     
+
       dispatch(updatePost(obj));
       handleClose();
     } catch (error) {
-      setError("Something Went Wrong")
+      setError("Something Went Wrong");
     }
   };
   return (
@@ -132,7 +132,7 @@ export default function Card({ post }) {
       </Modal>
 
       <div key={post.id} className="post">
-      <div className="icone">
+        <div className="icone">
           <div
             className="deleteicone"
             onClick={(e) => {
@@ -152,7 +152,6 @@ export default function Card({ post }) {
         </div>
         <h2>{post?.title}</h2>
         <p>{post?.body}</p>
-      
       </div>
     </>
   );
